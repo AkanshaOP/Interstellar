@@ -1,0 +1,132 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body {
+    font-family: 'Roboto', sans-serif;
+    background: rgb(220, 209, 209);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Required to overlay the login form on the video */
+} 
+/* Background Video */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire background */
+    z-index: -1; /* Keeps the video behind the login form */
+}
+
+/* Center the login form container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+}
+
+/* Style for the login form */
+.login-form {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent white background */
+    background: linear-gradient(45deg, #ffffff, #d87ac6, #270337, #9f36be);
+    background-size: 400% 400%;
+    border-radius: 10px;
+    padding: 40px 60px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  
+    width: 35vw;
+    text-align: center;
+    height: 50vh;
+    
+}
+
+/* Form heading */
+h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Input fields style */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 6px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #260edc;
+}
+
+/* Login button style */
+.login-btn {
+    background: linear-gradient(45deg, #182f06, #0fd21f, #474755, #5cab1c);
+    background-size: 400% 400%;
+    padding: 10px;
+    width: 40%;
+    border: none;
+    border-radius: 90px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #6a11cb;
+}
+
+/* Sign-up text */
+.signup {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.signup a {
+    color: #ffffff;
+    
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .login-form {
+        padding: 20px 30px;
+    }
+    h2 {
+        font-size: 70px;
+    }
+    .input-group input, .login-btn {
+        font-size: 40px;
+    }
+}
